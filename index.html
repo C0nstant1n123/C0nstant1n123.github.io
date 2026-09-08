@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Constantin Deumier — Computational Physics & Dev</title>
+<meta name="description" content="Physics student at ENS de Lyon building simulation and analysis tools for complex living systems.">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c232d;
+    --text:#e6edf3; --muted:#9aa7b4; --line:#2a323c;
+    --accent:#58a6ff; --accent2:#7ee787; --chip:#21262d;
+    --maxw:860px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+
+  /* Hero */
+  header{padding:88px 0 40px}
+  .kicker{color:var(--accent2); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:14px; letter-spacing:.5px; margin:0 0 14px}
+  h1{font-size:clamp(34px,6vw,52px); line-height:1.05; margin:0 0 18px; letter-spacing:-.02em}
+  .lead{font-size:clamp(18px,2.4vw,22px); color:var(--text); max-width:640px; margin:0 0 14px}
+  .sub{color:var(--muted); max-width:640px; margin:0 0 28px}
+  .cta{display:flex; gap:12px; flex-wrap:wrap}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:8px;
+    border:1px solid var(--line); background:var(--panel); color:var(--text); font-weight:600; font-size:14px;
+  }
+  .btn:hover{border-color:var(--accent); text-decoration:none}
+  .btn.primary{background:var(--accent); color:#04101f; border-color:var(--accent)}
+
+  /* Sections */
+  section{padding:44px 0; border-top:1px solid var(--line)}
+  h2{font-size:14px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); margin:0 0 26px; font-weight:700}
+
+  /* Projects */
+  .project{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:22px 22px 18px; margin-bottom:18px; transition:border-color .15s, transform .15s;
+  }
+  .project:hover{border-color:var(--accent); transform:translateY(-2px)}
+  .ptop{display:flex; justify-content:space-between; align-items:baseline; gap:14px; flex-wrap:wrap}
+  .project h3{margin:0; font-size:20px; letter-spacing:-.01em}
+  .project h3 a{color:var(--text)}
+  .project h3 a:hover{color:var(--accent)}
+  .plang{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; color:var(--muted); white-space:nowrap}
+  .pdesc{color:var(--muted); margin:10px 0 14px}
+  .built{color:var(--text); margin:0 0 14px; font-size:15px}
+  .built b{color:var(--accent2); font-weight:600}
+  .stack{display:flex; gap:8px; flex-wrap:wrap; margin-top:4px}
+  .chip{background:var(--chip); border:1px solid var(--line); color:var(--muted); font-size:12px; padding:3px 10px; border-radius:999px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  /* Skills */
+  .skillgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px}
+  .skillcard{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 18px}
+  .skillcard h4{margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--accent)}
+  .skillcard p{margin:0; color:var(--muted); font-size:14px}
+
+  /* Contact */
+  .contact a{display:inline-flex; align-items:center; gap:8px; margin-right:20px; color:var(--text)}
+  footer{padding:40px 0 60px; color:var(--muted); font-size:13px; border-top:1px solid var(--line)}
+
+  @media(max-width:560px){ header{padding:60px 0 30px} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">Computational physics · scientific software</p>
+    <h1>Constantin Deumier</h1>
+    <p class="lead">I build simulation and analysis tools for complex living systems.</p>
+    <p class="sub">Physics student at ENS de Lyon, focused on complex systems — designing and engineering
+      computational pipelines to study how collective computation and unsupervised learning emerge in biological matter.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/C0nstant1n123">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/constantin-deumier-163491295/">LinkedIn ↗</a>
+      <a class="btn" href="mailto:constantin.deumier@ens-lyon.fr">Email</a>
+    </div>
+  </div>
+</header>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Selected projects</h2>
+
+    <article class="project">
+      <div class="ptop">
+        <h3><a href="https://github.com/C0nstant1n123/TOPO-ADEX">Information flow in biological neural networks</a></h3>
+        <span class="plang">Python · Jupyter</span>
+      </div>
+      <p class="pdesc">How information propagates through a topological 2D spiking neural network.</p>
+      <p class="built"><b>Built:</b> a reproducible simulation-to-analysis pipeline — a 2D layout of AdEx neurons
+        in Brian2 driven by localized input, with an information-theoretic analysis stage (transfer entropy, active
+        information storage) on top of IDTxl.</p>
+      <div class="stack">
+        <span class="chip">Brian2</span><span class="chip">IDTxl</span><span class="chip">NumPy</span><span class="chip">information theory</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="ptop">
+        <h3><a href="https://github.com/ENSLProjects/Numerical_Project">Critical point in random dynamic graphs</a></h3>
+        <span class="plang">Jupyter · C</span>
+      </div>
+      <p class="pdesc">Simulating biological neural networks on random graphs and detecting patterns via transfer entropy.</p>
+      <p class="built"><b>Built:</b> the numerical core — network simulation on random graphs, with
+        <b>performance-critical routines offloaded to optimized C libraries</b> and driven from Python for the
+        transfer-entropy analysis.</p>
+      <div class="stack">
+        <span class="chip">C</span><span class="chip">Python</span><span class="chip">graph models</span><span class="chip">HPC-minded</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="ptop">
+        <h3><a href="https://github.com/C0nstant1n123/Biokan_Project">Biokan_Project</a></h3>
+        <span class="plang">Julia</span>
+      </div>
+      <p class="pdesc"><em>Do bacteria learn?</em> A KAN-inspired, unsupervised chemical reaction network embodied in a bacterial consortium.</p>
+      <p class="built"><b>Built:</b> a Julia model of a chemical reaction network performing unsupervised learning —
+        exploring bio-inspired computation where the substrate itself is the learner.</p>
+      <div class="stack">
+        <span class="chip">Julia</span><span class="chip">reaction networks</span><span class="chip">unsupervised learning</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Toolbox</h2>
+    <div class="skillgrid">
+      <div class="skillcard"><h4>Languages</h4><p>Python · Julia · C</p></div>
+      <div class="skillcard"><h4>Scientific computing</h4><p>Brian2 · IDTxl · NumPy · numerical methods · optimized C extensions</p></div>
+      <div class="skillcard"><h4>Domains</h4><p>Spiking neural networks · information theory · dynamical &amp; complex systems</p></div>
+      <div class="skillcard"><h4>Practice</h4><p>Reproducible pipelines · simulation &amp; analysis workflows · Git</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <a href="mailto:constantin.deumier@ens-lyon.fr">✉ constantin.deumier@ens-lyon.fr</a>
+    <a href="https://www.linkedin.com/in/constantin-deumier-163491295/">in LinkedIn ↗</a>
+    <a href="https://github.com/C0nstant1n123">GitHub ↗</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">ENS de Lyon · Lyon, France — built with plain HTML/CSS, hosted on GitHub Pages.</div>
+</footer>
+
+</body>
+</html>
