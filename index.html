@@ -132,6 +132,39 @@
         <span class="chip">Julia</span><span class="chip">reaction networks</span><span class="chip">unsupervised learning</span>
       </div>
     </article>
+
+    <article class="project">
+      <div class="ptop">
+        <h3><a href="https://github.com/C0nstant1n123/multiscale-diffusion-reproduction">Why denoise an image scale by scale?</a></h3>
+        <span class="plang">Python &middot; PyTorch</span>
+      </div>
+      <p class="pdesc">Reproduction of Guth, Kadkhodaie, Mallat &amp; Simoncelli (ICLR 2023) on multi-scale conditional
+        probability models of images, with R. Beauvallet.</p>
+      <p class="built"><b>Built:</b> the reproduction and its analysis &mdash; including a
+        <b>differentiable Haar wavelet transform in PyTorch</b>, written so gradients could flow through the
+        decomposition and reveal which pixels each model actually uses. Showed that a CNN with small 13&times;13
+        filters still reaches global context once the image is split by scale, and characterised the regime in which
+        the model invents detail that is not in the input.</p>
+      <div class="stack">
+        <span class="chip">PyTorch</span><span class="chip">diffusion models</span><span class="chip">wavelets</span><span class="chip">CNNs</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="ptop">
+        <h3><a href="https://github.com/C0nstant1n123/offshore-finance-network">Mapping offshore finance as a network</a></h3>
+        <span class="plang">Python &middot; Jupyter</span>
+      </div>
+      <p class="pdesc">What does offshore finance look like when the Panama Papers are treated as a single graph?
+        With R. Beauvallet.</p>
+      <p class="built"><b>Built:</b> a graph pipeline over the ICIJ Offshore Leaks database
+        (~815k entities, 3.3M relationships, ~600&nbsp;MB of raw records) &mdash; country-level capital flows separating
+        sources from sinks, centrality to find the jurisdictions that act as passage points rather than destinations,
+        a multilayer split by node type, and Louvain communities to ask whether they follow national borders.</p>
+      <div class="stack">
+        <span class="chip">NetworkX</span><span class="chip">Gephi</span><span class="chip">community detection</span><span class="chip">graph theory</span>
+      </div>
+    </article>
   </div>
 </section>
 
